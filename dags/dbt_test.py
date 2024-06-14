@@ -6,6 +6,7 @@ from airflow.decorators import task
 from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
+from airflow.utils.dates import days_ago
 from airflow.operators.bash_operator import BashOperator
 
 dbt_bash_executor_config={
