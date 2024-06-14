@@ -38,6 +38,14 @@ dag = DAG(
   default_args={"owner": "airflow"}
 )
 
+ls_task = BashOperator(
+  task_id="ls-task",
+  bash_command="ls /tmp",
+  dag=dag,
+  trigger_rule='all_done',
+  executor_config=dbt_bash_executor_config
+)
+
 dbt_task = BashOperator(
   task_id="test-task",
   bash_command="dbt run -m --project-dir /tmp/dags --profiles-dir /tmp/dags/orchestration",
