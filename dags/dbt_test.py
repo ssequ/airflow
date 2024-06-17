@@ -20,7 +20,7 @@ dbt_bash_executor_config={
             "name": "dag-storage"
         }]
      }],
-    "container_security_context": {
+    "containerSecurityContext": {
         #"allowPrivilegeEscalation": False,
         "capabilities": {"drop": ["ALL"]}
     },
