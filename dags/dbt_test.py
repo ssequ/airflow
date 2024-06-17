@@ -20,10 +20,10 @@ dbt_bash_executor_config={
             "name": "dag-storage"
         }]
      }],
-    #"container_security_context": {
+    "container_security_context": {
         #"allowPrivilegeEscalation": False,
-        #"capabilities": {"drop": ["ALL"]}
-    #},
+        "capabilities": {"drop": ["ALL"]}
+    },
     #"security_context": {
         #"runAsNonRoot": True,
         #"runAsUser": 50000,
