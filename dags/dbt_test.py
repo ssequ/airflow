@@ -15,7 +15,7 @@ dbt_bash_executor_config={
         "name": "init-container",
         "image": "busybox",
         "command": ['sh', '-c', 'chown -R airflow:airflow /data && chmod -R 775 /data'],
-        "volumeMounts": [{
+        "volume_mounts": [{
             "mountPath": "/data",
             "name": "dag-storage"
         }]
