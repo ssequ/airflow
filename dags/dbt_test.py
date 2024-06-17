@@ -23,7 +23,7 @@ dbt_bash_executor_config={
     "volume_mounts": [
       {
         "name": "dag-storage",
-        "mountPath": "/tmp/dags"
+        "mountPath": "/opt/airflow/dbt"
       }
     ]
   }
