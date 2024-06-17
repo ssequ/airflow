@@ -21,11 +21,11 @@ dbt_bash_executor_config={
         }]
      }],
     "container_security_context": {
-        "allowPrivilegeEscalation": False,
+        #"allowPrivilegeEscalation": False,
         "capabilities": {"drop": ["ALL"]}
     },
     "security_context": {
-        "runAsNonRoot": True,
+        #"runAsNonRoot": True,
         "runAsUser": 50000,
         "runAsGroup": 0,
         "fsGroup": 0,
