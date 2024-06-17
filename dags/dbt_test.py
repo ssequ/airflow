@@ -23,7 +23,7 @@ dbt_bash_executor_config={
     #"containerSecurityContext": {
         #"allowPrivilegeEscalation": False,
         #"capabilities": {"drop": ["ALL"]}
-    },
+    #},
     "security_context": {
         "runAsNonRoot": True,
         "runAsUser": 50000,
