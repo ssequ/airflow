@@ -20,17 +20,17 @@ dbt_bash_executor_config={
             "name": "dag-storage"
         }]
      }],
-    "containerSecurityContext": {
+    #"containerSecurityContext": {
         #"allowPrivilegeEscalation": False,
-        "capabilities": {"drop": ["ALL"]}
+        #"capabilities": {"drop": ["ALL"]}
     },
-    #"security_context": {
-        #"runAsNonRoot": True,
-        #"runAsUser": 50000,
-        #"runAsGroup": 0,
-        #"fsGroup": 0,
-        #"seccompProfile": {"type": "RuntimeDefault"}
-    #},
+    "security_context": {
+        "runAsNonRoot": True,
+        "runAsUser": 50000,
+        "runAsGroup": 0,
+        "fsGroup": 0,
+        "seccompProfile": {"type": "RuntimeDefault"}
+    },
     "volumes": [
       {
         "name": "dag-storage",
