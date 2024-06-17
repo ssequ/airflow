@@ -13,8 +13,8 @@ dbt_bash_executor_config={
   "KubernetesExecutor": {
     "init_containers": [{
         "name": "init-container",
-        "image": "apache/airflow:2.8.4-python3.9",
-        "command": ['sh', '-c', 'chown -R airflow:root /data && chmod -R 775 /data'],
+        "image": "busybox",
+        "command": ['sh', '-c', 'chmod -R 777 /data'],
         "volume_mounts": [{
             "mountPath": "/data",
             "name": "dag-storage"
