@@ -15,7 +15,7 @@ dbt_bash_executor_config={
         "name": "init-container",
         "image": "busybox",
         "command": ['sh', '-c', 'chmod -R 777 /data'],
-        "volume_mounts": [{
+        "volumeMounts": [{
             "mountPath": "/data",
             "name": "dag-storage"
         }]
