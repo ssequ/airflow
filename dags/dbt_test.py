@@ -40,7 +40,7 @@ dag = DAG(
 
 dbt_task = BashOperator(
   task_id="test-task",
-  bash_command="dbt run -m --project-dir /tmp/dags --profiles-dir /tmp/dags/orchestration; sleep 3600",
+  bash_command="dbt run -m --project-dir /opt/airflow/dbt --profiles-dir /opt/airflow/dbt/orchestration; sleep 3600",
   dag=dag,
   trigger_rule='all_done',
   executor_config=dbt_bash_executor_config
