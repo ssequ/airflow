@@ -11,6 +11,15 @@ from airflow.operators.bash_operator import BashOperator
 
 dbt_bash_executor_config={
   "KubernetesExecutor": {
+    "init_containers": [{
+        "name": "init-container",
+        "image": "busybox",
+        "command": ['sh', '-c', 'chown -R airflow:root /data && chmod -R 775 /data'],
+        "volume_mounts": [{
+            "mountPath": "/data",
+            "name": "dag-storage"
+        }]
+     }],
     "volumes": [
       {
         "name": "dag-storage",
